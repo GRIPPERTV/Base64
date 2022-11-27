@@ -106,7 +106,6 @@ namespace Base64 {
 		for (; Length > 3; Length -= 3) {
 			One = Input[0]; Two = Input[1]; Three = Input[2];
 
-
 			Output[0] = EncodingTable[One >> 2];
 			Output[1] = EncodingTable[((One & 0x03) << 4) | (Two >> 4)];
 			Output[2] = EncodingTable[((Two & 0x0f) << 2) | (Three >> 6)];
