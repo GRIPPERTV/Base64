@@ -1,0 +1,3 @@
+[submodule "Source/MyMacros"]
+	path = Source/MyMacros
+	url = https://github.com/GRIPPERTV/MyMacros
