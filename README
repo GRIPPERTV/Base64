@@ -1,9 +1,12 @@
 Made by fun because I don't wanted to be lazy and use any Base64 library out there,
 but I learned how bitwise works and how to exploit then to do some cool bit-stuff.
 
-This is a simple Base64 with only char support, all functions inside can be used
-in compile time, and faster than the most Base64 I benchmarked. Even if it's only
-have char support, you can use it with string creating a new char, enconding, and
-then creating a new string with the value of char.
+With only char support, functions in compile time, error handling in the caller
+side (you need to check the errors) and one of the fastests Base64 I benchmarked.
+
+You can encode strings too with the data function (https://t.ly/VP40).
+For example:
+  std::string Hey("", 4);
+  Base64::Encode3Bytes((char*)Hey.data(), "Hey", 3);
 
 No license because Base64 projects are very simple and don't need to be monopolized.
