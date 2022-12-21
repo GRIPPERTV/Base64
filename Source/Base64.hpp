@@ -6,13 +6,13 @@
 
 namespace Base64 {
 	constorexpr unsigned char EncodingTable[] = {
-		'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 
+		'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
 		'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 
-		'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 
-		'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 
-		'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 
-		'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 
-		'w', 'x', 'y', 'z', '0', '1', '2', '3', 
+		'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
+		'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f',
+		'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
+		'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
+		'w', 'x', 'y', 'z', '0', '1', '2', '3',
 		'4', '5', '6', '7', '8', '9',
 		
 		#ifdef BASE64_URL
@@ -39,7 +39,7 @@ namespace Base64 {
 
 	 The addition of 3 and comparing ~3 is a method to round
 	 to the next greater multiple of 4 for padding addition */
-	inline constexpr size_t EncodeLength(const size_t& Length) {
+	constexpr11 inline size_t EncodeLength(const size_t& Length) {
 		return ((4 * (Length / 3)) + 3) & ~3;
 	}
 
