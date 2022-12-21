@@ -9,4 +9,6 @@ For example:
   std::string Hey("", 4);
   Base64::Encode3Bytes((char*)Hey.data(), "Hey", 3);
 
+For Base64 url encoding just define BASE64_URL.
+
 No license because Base64 projects are very simple and don't need to be monopolized.
